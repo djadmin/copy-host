@@ -8,12 +8,14 @@ function executeCopy(text) {
 }
 
 function getHostName(url) {
+	// Handle Chrome URLs
+	if (/^chrome:\/\//.test(url)) { return; }
+
 	try {
 		var url = new URL(url);
 		return url.hostname;
 	} catch (err) {
 		console.log(err);
-		return null;
 	}
 }
 
