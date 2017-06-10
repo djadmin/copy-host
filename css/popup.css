@@ -1,0 +1,8 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+	min-width: 200px;
+	text-align: center;
+	color: #4a4a4a;
+}
+.emoji { font-size: 2em; }
+#hostname { font-size: 1.3em; color: #de5050; }

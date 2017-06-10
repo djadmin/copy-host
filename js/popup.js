@@ -35,5 +35,5 @@ chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
 	executeCopy(hostname);
 	setHostname(hostname);
 	chrome.browserAction.setIcon({path: 'img/icon16_dark.png'});
-	setTimeout(onPopupClose, 1000);
+	setTimeout(onPopupClose, 1500);
 });
