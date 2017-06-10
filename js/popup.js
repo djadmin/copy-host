@@ -18,15 +18,22 @@ function getHostname(url) {
 	}
 }
 
-function acknowledge(hostname) {
+function setHostname(hostname) {
 	var elem = document.getElementById('hostname');
 	elem.innerText = hostname;
 }
 
+function onPopupClose() {
+	window.close();
+	chrome.browserAction.setIcon({path: 'img/icon16.png'});
+}
 
 chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
 	var hostname = getHostname(tabs[0].url);
-	if (!hostname) { window.close(); }
+	if (!hostname) { window.close(); return; }
+
 	executeCopy(hostname);
-	acknowledge(hostname);
+	setHostname(hostname);
+	chrome.browserAction.setIcon({path: 'img/icon16_dark.png'});
+	setTimeout(onPopupClose, 1000);
 });
