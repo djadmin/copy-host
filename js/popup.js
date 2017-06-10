@@ -7,10 +7,9 @@ function executeCopy(text) {
 	input.remove();
 }
 
-function getHostName(url) {
+function getHostname(url) {
 	// Handle Chrome URLs
 	if (/^chrome:\/\//.test(url)) { return; }
-
 	try {
 		var url = new URL(url);
 		return url.hostname;
@@ -19,17 +18,15 @@ function getHostName(url) {
 	}
 }
 
-function acknowledge() {
-	chrome.browserAction.setBadgeText ( { text: 'Yay' } );
-	setTimeout(function () {
-	    chrome.browserAction.setBadgeText( { text: '' } );
-	}, 500);
+function acknowledge(hostname) {
+	var elem = document.getElementById('hostname');
+	elem.innerText = hostname;
 }
 
-chrome.browserAction.onClicked.addListener(function (tab) {
-	var host = getHostName(tab.url);
-	if (host) {
-		executeCopy(host);
-		acknowledge();
-	}
+
+chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
+	var hostname = getHostname(tabs[0].url);
+	if (!hostname) { window.close(); }
+	executeCopy(hostname);
+	acknowledge(hostname);
 });
