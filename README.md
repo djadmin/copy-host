@@ -1,6 +1,8 @@
-# Copy Host
+# Copy Host [![Build Status](https://travis-ci.org/djadmin/copy-host.svg?branch=master)](https://travis-ci.org/djadmin/copy-host)
 
 Copy Host allows you to copy hostname of the current tab to your clipboard.
+
+[![Install](/screenshots/store_badge.png)](https://chrome.google.com/webstore/detail/copy-host/bnimbjbohdeakocjbldadiggnlmlgmie)
 
 ![Screenshot](/screenshots/fullshot.png)
 
