@@ -15,18 +15,23 @@ For example, if you try to copy the URL https://www.google.com from the browser 
 
 ## Installation
 
-Copy Host is available on Chrome Web Store. No special permission is required to install.
+Copy Host is available on [Chrome Web Store](https://chrome.google.com/webstore/detail/copy-host/bnimbjbohdeakocjbldadiggnlmlgmie). No additional permissions are required to install.
 
-### Development
+### Keyboard Shortcut
 
-1. Clone this repo.
+```Alt + C``` can be used to copy the hostname to your clipboard directly.
 
+### Screenshot
+![Screenshot](/screenshots/shot.png)
+
+## Development
+
+1. Clone this repo 
 ```git clone https://github.com/djadmin/copy-host```
 
 2. Make your changes.
 
 3. To test, go to: chrome://extensions, enable Developer mode and load src as an unpacked extension.
-
 
 ## Contributing
 
@@ -38,7 +43,6 @@ Copy Host is available on Chrome Web Store. No special permission is required to
 ### Issues
 
 Feel free to submit issues and feature requests.
-
 
 ### License
 
