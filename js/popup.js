@@ -23,17 +23,16 @@ function setHostname(hostname) {
 	elem.innerText = hostname;
 }
 
-function onPopupClose() {
+function closePopup() {
 	window.close();
-	chrome.browserAction.setIcon({path: 'img/icon16.png'});
 }
+
 
 chrome.tabs.query({active: true, currentWindow: true}, function (tabs) {
 	var hostname = getHostname(tabs[0].url);
-	if (!hostname) { window.close(); return; }
-
+	if (!hostname) { closePopup(); return; }
+	// Copy to clipboard and shows a popup
 	executeCopy(hostname);
 	setHostname(hostname);
-	chrome.browserAction.setIcon({path: 'img/icon16_dark.png'});
-	setTimeout(onPopupClose, 1500);
+	setTimeout(closePopup, 1500);
 });
