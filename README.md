@@ -8,7 +8,7 @@ Copy Host allows you to copy hostname of the current tab to your clipboard.
 
 ## Why?
 
-Chrome in some cases, prepend ```http://``` to the URL when you try to copy. I constantly copy URL from the browser to shell and it it makes me crazy. 
+Chrome in some cases, prepend ```http://``` to the URL when you try to copy. I constantly copy URL from the browser to shell and it makes me crazy. 
 To avoid that, I built this very simple Chrome extension to get only the hostname of the website you are currently browsing. Also, made it a lot easier to copy the hostname with just a shortcut key, i.e., `Alt + C`.
 
 For example, if you try to copy the URL https://www.google.com from the browser and try to ```ping``` using a shell, it doesn't work.
