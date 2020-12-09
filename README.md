@@ -29,7 +29,7 @@ Copy Host is available on [Chrome Web Store](https://chrome.google.com/webstore/
 ## Development
 
 1. Clone this repo 
-```git clone https://github.com/sqpp/copy-host```
+```git clone https://github.com/djadmin/copy-host```
 
 2. Make your changes.
 
