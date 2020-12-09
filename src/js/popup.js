@@ -11,6 +11,7 @@ function getHostname(url) {
 	// Handle Chrome URLs
 	if (/^chrome:\/\//.test(url)) { return; }
 	try {
+		var url = url.replace('www.','');
 		var newUrl = new URL(url);
 		return newUrl.hostname;
 	} catch (err) {
