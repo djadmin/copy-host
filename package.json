@@ -1,6 +1,6 @@
 {
   "name": "copyhost",
-  "version": "1.0.0",
+  "version": "1.0.1e",
   "description": "A chrome extension that allows to copy hostname to clipboard",
   "scripts": {
     "test": "jshint src"
