@@ -12,7 +12,7 @@ function getHostname(url) {
 	if (/^chrome:\/\//.test(url)) { return; }
 	try {
 		var newUrl = new URL(url);
-		return newUrl.hostname;
+		return newUrl.host;
 	} catch (err) {
 		console.log(err);
 	}
