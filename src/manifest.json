@@ -3,7 +3,7 @@
 
   "name": "Copy Host",
   "short_name": "copyhost",
-  "description": "This extension allows you to copy hostname of the current tab to your clipboard.",
+  "description": "This extension allows you to copy the hostname of the current tab to your clipboard.",
   "version": "1.0",
 
   "action": {
@@ -24,7 +24,7 @@
     "*://*/*"
   ],
   "commands": {
-    "_execute_browser_action": {
+    "_execute_action": {
       "suggested_key": {
         "default": "Alt+C"
       }
